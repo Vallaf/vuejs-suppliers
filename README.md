@@ -23,6 +23,8 @@ npm install --global @vue/cli
 
 **Votre réponse :**
 
+Npm est le gestionnaire de paquets de Node.js. Node.js est un serveur, basé sur le moteur V8 de chrome qui permet d’interpréter du code javascript coté serveur. Grace à npm vous pouvez installer des paquets et leurs dépendances. 
+
 Vérfier que la version de Vue CLI installée est au moins la version 3 :
 
 ```
