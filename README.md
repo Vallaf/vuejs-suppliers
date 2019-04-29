@@ -24,6 +24,10 @@ npm install --global @vue/cli
 **Votre réponse :**
 
 Npm est le gestionnaire de paquets de Node.js. Node.js est un serveur, basé sur le moteur V8 de chrome qui permet d’interpréter du code javascript coté serveur. Grace à npm vous pouvez installer des paquets et leurs dépendances. 
+Les packages gérés par npm peuvent être installés suivant 2 modes: local ou global:
+
+Local: le package installé localement est installé dans un répertoire qui se trouve dans le répertoire de l’application. Ce répertoire est nommé node_modules. Le package est accessible seulement dans le répertoire de l’application. Dans ce mode, chaque application peut utiliser une version spécifique d’un même package.
+Global: le package est installé de façon globale dans un répertoire accessible dans le répertoire d’installation de Node.js. Dans notre cas, ce répertoire est: /usr/node.js/node-v8.10.0-linux-x64/. Si un package est installé dans ce répertoire, il est partagé par toutes les applications.
 
 Vérfier que la version de Vue CLI installée est au moins la version 3 :
 
