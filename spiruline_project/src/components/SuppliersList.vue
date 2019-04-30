@@ -1,5 +1,5 @@
 <template>
-  <div class="SuppliersList">
+  <div >
     <h1>Liste des fournisseurs</h1>
   </div>
 </template>
@@ -7,10 +7,12 @@
 <script>
 export default {
   name: "SuppliersList", 
-  props: {
-    msg: String
+  data (){
+    
   }                                    
 };
+
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only --> 
@@ -27,6 +29,6 @@ li {
   margin: 0 10px;
 }
 a {
-  color: #42b983;
+  color: pink;
 }
 </style>

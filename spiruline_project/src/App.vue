@@ -1,32 +1,26 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Que voulez-vous faire"/>
-    <SuppliersList />
-    <SuppliersMap/>
-    <button v-on:click="onSuppliersListClick()">Liste des fournisseurs</button>
-    <button v-on:click="onMapClick()">Carte des fournisseurs</button>
+    <img alt="Vue logo" src="./assets/spiruline.png">
+    <HelloWorld msg="SPIRULINE PROJECT"/>
+
+    <button type="button" class="btn btn-success" v-on:click="onSuppliersListClick()">
+      <router-link to="/suppliers">Liste des fournisseurs</router-link>
+    </button>
+
+    <button type="button" class="btn btn-success" v-on:click="onMapClick()">
+      <router-link to="/map">Carte des fournisseurs</router-link>
+    </button>
+    <router-view></router-view>
   </div>
 </template>
-
+ 
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
-import SuppliersList from "./components/SuppliersList.vue";
-import SuppliersMap from "./components/SuppliersMap.vue";
+
 export default {
   name: "app",
   components: {
-    HelloWorld,
-    SuppliersList,
-    SuppliersMap
-  },
-  methods: {
-    onSuppliersListClick: function() {
-      alert("Vous avez cliqué sur la liste des fournisseurs");
-    },
-    onMapClick: function() {
-      alert("Vous avez cliqué sur la carte des fournisseurs");
-    }
+    HelloWorld
   }
 };
 </script>
@@ -37,7 +31,12 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #8a25c5;
   margin-top: 60px;
+}
+
+.btn-success {
+  background: #91ce85;
+  color: #fff;
 }
 </style>

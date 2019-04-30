@@ -1,6 +1,7 @@
 <template>
   <div class="SuppliersMap">
    <h1>Carte des fournisseurs</h1>
+    
   </div>
 </template>
 
@@ -29,6 +30,6 @@ li {
   margin: 0 10px;
 }
 a {
-  color: #42b983;
+  color: pink;
 }
 </style>
