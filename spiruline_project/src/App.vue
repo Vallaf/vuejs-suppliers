@@ -1,26 +1,27 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/spiruline.png">
-    <HelloWorld msg="SPIRULINE PROJECT"/>
+    <HomePage msg="SPIRULINE PROJECT"/>
 
-    <button type="button" class="btn btn-success" v-on:click="onSuppliersListClick()">
+    <button type="button" class="btn btn-success">
       <router-link to="/suppliers">Liste des fournisseurs</router-link>
     </button>
 
-    <button type="button" class="btn btn-success" v-on:click="onMapClick()">
+    <button type="button" class="btn btn-success">
       <router-link to="/map">Carte des fournisseurs</router-link>
     </button>
+
     <router-view></router-view>
   </div>
 </template>
  
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import HomePage from "./components/HomePage.vue";
 
 export default {
   name: "app",
   components: {
-    HelloWorld
+    HomePage
   }
 };
 </script>
@@ -37,6 +38,11 @@ export default {
 
 .btn-success {
   background: #91ce85;
-  color: #fff;
+  color: #8a25c5;
+}
+
+a {
+  color: #8a25c5;
+  text-decoration: none;
 }
 </style>

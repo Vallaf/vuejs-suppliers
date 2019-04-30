@@ -1,18 +1,20 @@
 <template>
-  <div >
-    <h1>Liste des fournisseurs</h1>
+  <div id="SuppliersList">
+    <!-- <router-link to="/supplier">Fournisseur A</router-link> -->
+
+    <Supplier></Supplier>
   </div>
 </template>
 
 <script>
+import Supplier from "./Supplier.vue";
 export default {
-  name: "SuppliersList", 
-  data (){
-    
-  }                                    
+  name: "SuppliersList",
+  components: {
+    Supplier
+  },
+  data() {}
 };
-
-
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only --> 
@@ -28,7 +30,5 @@ li {
   display: inline-block;
   margin: 0 10px;
 }
-a {
-  color: pink;
-}
+
 </style>
