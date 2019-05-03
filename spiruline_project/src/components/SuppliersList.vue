@@ -2,7 +2,7 @@
   <div id="SuppliersList">
     <router-link to="/supplier"></router-link>
     <h1>Liste des fournisseurs</h1>
-    <Supplier 
+    <Supplier
       v-for="supplier in suppliers"
       :key="supplier.id"
       :name="supplier.name"
@@ -14,7 +14,7 @@
 
 <script>
 import Supplier from "./Supplier.vue";
-import { format, render, cancel, register } from 'timeago.js';
+import { format, render, cancel, register } from "timeago.js";
 
 export default {
   name: "SuppliersList",
@@ -24,8 +24,6 @@ export default {
   },
 
   data() {
-    activeColor: "red";
-  
     return {
       suppliers: [
         {
@@ -59,6 +57,4 @@ li {
   display: inline-block;
   margin: 0 10px;
 }
-
-
 </style>
