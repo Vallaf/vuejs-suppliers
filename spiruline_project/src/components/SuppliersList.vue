@@ -14,6 +14,8 @@
 
 <script>
 import Supplier from "./Supplier.vue";
+import { format, render, cancel, register } from 'timeago.js';
+
 export default {
   name: "SuppliersList",
 
@@ -23,19 +25,20 @@ export default {
 
   data() {
     activeColor: "red";
+  
     return {
       suppliers: [
         {
           id: 1,
-          name: "Fournisseur 1 ",
+          name: "Bim bim bam",
           status: true,
-          checkedAt: new Date()
+          checkedAt: format(Date.now() - 11 * 1000 * 60 * 60)
         },
         {
           id: 2,
-          name: "Fournisseur 2",
+          name: "Bam bam bim",
           status: false,
-          checkedAt: new Date()
+          checkedAt: format(Date.now() - 11 * 1000 * 60 * 60)
         }
       ]
     };

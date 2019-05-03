@@ -2,14 +2,21 @@ import Vue from 'vue'
 import App from './App.vue'
 import VueRouter from 'vue-router'
 import routes from './router/index.js'
+import apiKey from '../config.js'
+import * as VueGoogleMaps from 'vue2-google-maps'
+
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: apiKey,
+  }
+})
 
 Vue.use(VueRouter)
 
 Vue.config.productionTip = false
 
-
 const router = new VueRouter({
-  routes 
+  routes
 })
 
 new Vue({
