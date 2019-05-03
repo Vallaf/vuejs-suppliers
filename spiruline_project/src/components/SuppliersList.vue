@@ -2,7 +2,7 @@
   <div id="SuppliersList">
     <router-link to="/supplier"></router-link>
     <h1>Liste des fournisseurs</h1>
-    <Supplier
+    <Supplier 
       v-for="supplier in suppliers"
       :key="supplier.id"
       :name="supplier.name"
@@ -56,4 +56,6 @@ li {
   display: inline-block;
   margin: 0 10px;
 }
+
+
 </style>

@@ -17,3 +17,12 @@ export default {
   }
 };
 </script>
+
+<style>
+.Supplier {
+ display: block;
+ margin: 10px 5px 5px 100px;
+ border: 1px solid;
+ border-radius: 10px;
+}
+</style>
