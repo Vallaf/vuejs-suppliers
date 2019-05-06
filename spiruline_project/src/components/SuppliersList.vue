@@ -13,8 +13,10 @@
 </template>
 
 <script>
+import axios from "axios";
 import Supplier from "./Supplier.vue";
 import { format, render, cancel, register } from "timeago.js";
+
 
 export default {
   name: "SuppliersList",
@@ -25,23 +27,20 @@ export default {
 
   data() {
     return {
-      suppliers: [
-        {
-          id: 1,
-          name: "Bim bim bam",
-          status: true,
-          checkedAt: format(Date.now() - 11 * 1000 * 60 * 60)
-        },
-        {
-          id: 2,
-          name: "Bam bam bim",
-          status: false,
-          checkedAt: format(Date.now() - 11 * 1000 * 60 * 60)
-        }
-      ]
-    };
+      suppliers: [],
+      loading: false,
+      error: null,
+    }
+  },
+ mounted () {
+     axios
+      .get('https://api-suppliers.herokuapp.com/api/suppliers')
+      .then(response => {
+        this.suppliers = response.data})
+  
   }
-};
+  };
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only --> 
@@ -58,3 +57,4 @@ li {
   margin: 0 10px;
 }
 </style>
+}
