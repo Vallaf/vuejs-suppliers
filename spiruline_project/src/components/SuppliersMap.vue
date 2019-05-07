@@ -12,7 +12,7 @@
       <GmapMarker
         :key="index"
         v-for="(supplier, index) in suppliers"
-        :position="{lat:supplier.latitude, lng:supplier.longitude}"
+        :position="{lat: parseFloat(supplier.latitude), lng: parseFloat(supplier.longitude)}"
         :clickable="true"
         :draggable="true"
         @click="center=supplier.suppliers"
@@ -22,6 +22,7 @@
 </template>
 
 <script>
+import axios from "axios";
 import Supplier from "./Supplier.vue";
 export default {
   name: "SuppliersMap",
@@ -29,7 +30,21 @@ export default {
     Supplier
   },
 
-  data() {
+ data() {
+   return {
+      suppliers: [],
+      loading: false,
+      error: null
+    };
+  },
+  created() {
+    axios
+      .get("https://api-suppliers.herokuapp.com/api/suppliers")
+      .then(response => {
+        this.suppliers = response.data;
+      })
+  }
+ /* data() {
     return {
       suppliers: [
         {
@@ -44,7 +59,7 @@ export default {
         }
       ]
     };
-  }
+  }*/
 };
 </script>
 
