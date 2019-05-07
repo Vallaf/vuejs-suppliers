@@ -13,7 +13,9 @@ export default {
   props: {
     name: String,
     status: Boolean,
-    checkedAt: String
+    checkedAt: String,
+    longitude: Number,
+    latitude: Number
   }
 };
 </script>
